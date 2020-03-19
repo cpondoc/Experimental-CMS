@@ -1,0 +1,20 @@
+{% for post in posts %}
+    <li class="list-group-item">
+        <div class="row">
+            <div class="col-2">
+                <img class="avatar" src="https://avatars0.githubusercontent.com/u/29668448?s=460&u=abdafe71fbc4d51422ed1450ad8d518779efcb52&v=4" width="100px" height="100px"/>
+                <br />
+                <br />
+                <p>{{post.poster}}</p>
+            </div>
+            <div class="col-10">
+                <h4><b>{{post.subject}}</b></h4>
+                <a href="#" class="badge badge-success">{{post.post_type}}</a>
+                <br />
+                <br />
+                <p>{{post.message}}</p>
+                <p class="card-text"><small class="text-muted">{{post.timestamp}} · 💭 Comment · 👍🏻 Like</small></p>
+            </div>
+        </div>
+    </li>
+{% endfor %}

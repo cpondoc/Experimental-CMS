@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+from classes.quickstart import set_up
+import classes.post
 
 app = Flask(__name__)
 
@@ -6,7 +8,9 @@ STUDENT_NAME = "Chris Pondoc"
 
 @app.route('/')
 def return_index():
-    return render_template('index.html', title="🏠 Home", description="Home is where the heart is!", student_name = STUDENT_NAME)
+    list_of = {}
+    list_of = set_up()
+    return render_template('index.html', title="🏠 Home", description="Home is where the heart is!", student_name = STUDENT_NAME, posts=list_of)
 
 @app.route('/hours')
 def return_hours():
