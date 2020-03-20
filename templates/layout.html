@@ -11,6 +11,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="http://127.0.0.1:5000/assets/favicon.png">
+
     <!-- Title for Webpage -->
     <title>{% block title %}{% endblock %} | Cluman</title>
 
@@ -24,7 +27,7 @@
         div.card, ul.list-group, div.progress, img.avatar {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
-        a.left-nav, a.left-nav:hover 
+        a.left-nav, a.left-nav:hover, a.no-style
         {
           color: black;
           text-decoration: none;
@@ -38,6 +41,17 @@
         #on {
             background-color: #f7f7f7;
             border-color: #f7f7f7;
+        }
+        #add-post {
+          background-color: transparent;
+          border-color: transparent;
+          color: black;
+        }
+        label {
+          font-size:16px;
+        }
+        .form-text {
+          font-size: 12px;
         }
     </style>
   </head>

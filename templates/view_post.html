@@ -8,14 +8,15 @@
         {% include 'includes/_navbar.html' %}
         </div>
         {% include 'includes/_title.html' %}
-        <br />
-        <div class="card-columns">
-            <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title">📁 Important Documents</h5>
-                  <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-                </div>
-          </div>
+              <br />
+              <div class="card">
+                <div class="card-header">
+                    <h3>🗞 Post</h3>
+                  </div>
+                  <ul class="list-group list-group-flush">
+                    {% include 'includes/_post.html' %}
+                  </ul>
+              </div>
         </div>
         <div class="col-1"></div>
       </div>

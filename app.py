@@ -1,10 +1,25 @@
-from flask import Flask, render_template
-from classes.quickstart import set_up
+from flask import Flask, render_template, send_from_directory
+from classes.fetch_data import set_up
 import classes.post
 
 app = Flask(__name__)
 
+ASSET_FOLDER = 'assets/'
 STUDENT_NAME = "Chris Pondoc"
+
+app.config['ASSET_FOLDER'] = ASSET_FOLDER
+
+@app.route('/posts/<poster>/<subject>')
+def view_post(poster, subject):
+    list_of = {}
+    list_of = set_up()
+    for post in list_of:
+        if post.poster == poster and post.subject == subject:
+            return render_template('view_post.html', title="🔍 View Post", description="Take a closer look.", student_name = STUDENT_NAME, post=post)
+
+@app.route('/assets/<filename>')
+def asset_file(filename):
+    return send_from_directory(app.config['ASSET_FOLDER'], filename)
 
 @app.route('/')
 def return_index():

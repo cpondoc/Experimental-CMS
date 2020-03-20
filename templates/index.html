@@ -5,14 +5,14 @@
     <br />
     <div class="row">
         <div class="col-3">
-            <h3></h3>
         {% include 'includes/_navbar.html' %}
         </div>
         {% include 'includes/_title.html' %}
               <br />
               <div class="card">
                 <div class="card-header">
-                    <h3>🗞 Stream</h3>
+                    <h3>🗞 Stream
+                      <span style="float:right;">{% include 'includes/_addpost.html' %}</span></h3>
                   </div>
                   <ul class="list-group list-group-flush">
                     {% include 'includes/_posts.html' %}
